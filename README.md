@@ -24,3 +24,16 @@ $response->send();
 $kernel->terminate($request, $response);
 
 ```
+
+```twig
+
+{% verbatim %}
+   <li> 欢迎 <%t "Hello %nickname%" ___ {"%nickname%": "李さん", "domain": "", "local": ""} %>
+                         </li>
+	
+    <p> <%t  "需要店铺认证后才能发布商品" %> </p>	
+{% endverbatim %}
+```
+
+![image]()
+
