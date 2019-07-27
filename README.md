@@ -1,5 +1,13 @@
+需求是老项目要做多语言，
 
-php使用
+但是前端用ｖｕｅ1.x 时为了和ｔｗｉｇ都用{{}}不冲突，于是用了vｅrbatim，
+
+然后现在要多语言时，默认的方式就犯难了，要么前端用ｖｕｅ　i18再重写一遍不好需要维护两套翻译，
+
+要么后端渲染，于是就有了这个项目，思路是把ｒｅｓｐｏｎｓｅ返回的ｈｔｍｌ再次通过渲染一遍
+
+##### php使用
+
 
 ```php
 
@@ -28,7 +36,7 @@ $kernel->terminate($request, $response);
 ```
 
 
-twig verbatim里使用类erb语法`<%t %>`
+##### twig verbatim里使用类erb语法`<%t %>`
 
 ```twig
 
@@ -40,6 +48,6 @@ twig verbatim里使用类erb语法`<%t %>`
 {% endverbatim %}
 ```
 
-结果：
+##### 结果
 ![image](https://raw.githubusercontent.com/zjsxwc/simple-translator-template/master/example.png)
 
