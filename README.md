@@ -1,4 +1,6 @@
 
+php使用
+
 ```php
 
 
@@ -11,9 +13,9 @@ if ($response->headers->has("Content-Type")) {
     $contentType = $response->headers->get("Content-Type");
     if (strpos($contentType,"text/html") !== false) {
         $content = $response->getContent();
-		$translator = $kernel->getContainer()->get("translator")；
-        
-		$tte = new \Common\Util\TextTranslateEngine($translator);
+
+        $translator = $kernel->getContainer()->get("translator")；
+        $tte = new \Common\Util\TextTranslateEngine($translator);
         $newContent = $tte->render($content);
 		
         $response->setContent($newContent);
@@ -25,6 +27,9 @@ $kernel->terminate($request, $response);
 
 ```
 
+
+twig verbatim里使用类erb语法`<%t %>`
+
 ```twig
 
 {% verbatim %}
@@ -35,5 +40,6 @@ $kernel->terminate($request, $response);
 {% endverbatim %}
 ```
 
+结果：
 ![image](https://raw.githubusercontent.com/zjsxwc/simple-translator-template/master/example.png)
 
