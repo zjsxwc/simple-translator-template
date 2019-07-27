@@ -35,5 +35,5 @@ $kernel->terminate($request, $response);
 {% endverbatim %}
 ```
 
-![image]()
+![image](https://raw.githubusercontent.com/zjsxwc/simple-translator-template/master/example.png)
 
